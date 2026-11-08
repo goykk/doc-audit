@@ -1,0 +1,223 @@
+{
+  "doc_id": "cord_test_0014",
+  "doc_type": "receipt",
+  "pipeline": "layout_llm",
+  "model": "cord_ground_truth",
+  "fields": {
+    "subtotal": {
+      "value": "238,000",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "tax_total": {
+      "value": "25,585",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "discount_total": {
+      "value": null,
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "amount_total": {
+      "value": "281,435",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "RedVelvet Cheese Slc",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": "1",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "38,000",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "Chicken Baked Rice",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": "1",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "55,000",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "Fish n Chips",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": "1",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "65,000",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "Mushroom Soup",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": "1",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "35,000",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "Chamomile",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": "1",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "25,000",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "Iced Tea",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": "1",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "20,000",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    }
+  ],
+  "latency_ms": 0,
+  "parse_latency_ms": 0,
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "cost_cny": 0.0
+}

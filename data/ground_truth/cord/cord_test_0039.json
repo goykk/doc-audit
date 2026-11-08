@@ -1,0 +1,133 @@
+{
+  "doc_id": "cord_test_0039",
+  "doc_type": "receipt",
+  "pipeline": "layout_llm",
+  "model": "cord_ground_truth",
+  "fields": {
+    "subtotal": {
+      "value": null,
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "tax_total": {
+      "value": null,
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "discount_total": {
+      "value": null,
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "amount_total": {
+      "value": null,
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "LUNCH BOX 3P SET W/RED BAG & SP00 N.",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": "8",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": "243,000",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "1,944,000",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "RICE CASE 7L W/CUP",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": "5",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": "195,000",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "975,000",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "LUNCH BOX 3P SET W/BLACK BAG & SP OON",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": "4",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": "243,000",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "972,000",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    }
+  ],
+  "latency_ms": 0,
+  "parse_latency_ms": 0,
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "cost_cny": 0.0
+}

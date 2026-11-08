@@ -1,0 +1,193 @@
+{
+  "doc_id": "cord_test_0020",
+  "doc_type": "receipt",
+  "pipeline": "layout_llm",
+  "model": "cord_ground_truth",
+  "fields": {
+    "subtotal": {
+      "value": "325,600",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "tax_total": {
+      "value": "34,351",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "discount_total": {
+      "value": null,
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "amount_total": {
+      "value": "377,859",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "cashew nuts chkn",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": "1",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "64,500",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "garlic pepper beef",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": "1",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "79,500",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "red curry beef",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": "1",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "69,500",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "phad thai",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": "1",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "64,500",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "steamed rice",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": "4",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "47,600",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    }
+  ],
+  "latency_ms": 0,
+  "parse_latency_ms": 0,
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "cost_cny": 0.0
+}

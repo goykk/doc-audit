@@ -1,0 +1,343 @@
+{
+  "doc_id": "cord_test_0041",
+  "doc_type": "receipt",
+  "pipeline": "layout_llm",
+  "model": "cord_ground_truth",
+  "fields": {
+    "subtotal": {
+      "value": "316017.00",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "tax_total": {
+      "value": null,
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "discount_total": {
+      "value": null,
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "amount_total": {
+      "value": "365000.00",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "Chicken Maryland",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "47619.00",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "Cappucino (Hot/Iced)",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "30303.00",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "Naga Lychee Juice",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "34632.00",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "Cafe Latte",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "30303.00",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "Hot Chocolate Marshmallo",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "30303.00",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "Chicken Cesar Salad",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "43290.00",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "Mineral Water",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "12987.00",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "Mineral Water",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "12987.00",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "Lychee/Peach/Lemon/Mango",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "25974.00",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "Chicken Maryland",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": null,
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "47619.00",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    }
+  ],
+  "latency_ms": 0,
+  "parse_latency_ms": 0,
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "cost_cny": 0.0
+}

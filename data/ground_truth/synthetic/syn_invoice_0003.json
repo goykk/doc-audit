@@ -1,0 +1,159 @@
+{
+  "doc_id": "syn_invoice_0003",
+  "doc_type": "cn_invoice",
+  "pipeline": "layout_llm",
+  "model": "synthetic_ground_truth",
+  "fields": {
+    "invoice_number": {
+      "value": "INV20260003",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "invoice_date": {
+      "value": "2026-11-03",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "seller_name": {
+      "value": "上海云杉科技有限公司",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "seller_tax_id": {
+      "value": "91310115MA1K3A1B2C",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "buyer_name": {
+      "value": "深圳前海示例咨询有限公司",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "buyer_tax_id": {
+      "value": "91440300MA5F6G7H8J",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "subtotal": {
+      "value": "1,411.00",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "tax_total": {
+      "value": "84.66",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "tax_rate": {
+      "value": "6%",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "amount_total": {
+      "value": "1,495.66",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "total_with_tax": {
+      "value": "1,495.66",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    },
+    "amount_in_words": {
+      "value": "壹仟肆佰玖拾伍元陆角陆分",
+      "quote": null,
+      "bbox": null,
+      "confidence": 1.0,
+      "source": "parser"
+    }
+  },
+  "line_items": [
+    {
+      "description": {
+        "value": "清洁用品D03",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": "2",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": "423.30",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "846.60",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    },
+    {
+      "description": {
+        "value": "办公用品A03",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "quantity": {
+        "value": "1",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "unit_price": {
+        "value": "564.40",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      },
+      "amount": {
+        "value": "564.40",
+        "quote": null,
+        "bbox": null,
+        "confidence": 1.0,
+        "source": "parser"
+      }
+    }
+  ],
+  "latency_ms": 0,
+  "parse_latency_ms": 0,
+  "prompt_tokens": 0,
+  "completion_tokens": 0,
+  "cost_cny": 0.0
+}

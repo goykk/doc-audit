@@ -1,0 +1,192 @@
+{
+  "$defs": {
+    "BoundingBox": {
+      "additionalProperties": false,
+      "description": "Pixel coordinates on a page rendered at `dpi` (default 200).",
+      "properties": {
+        "x0": {
+          "minimum": 0,
+          "title": "X0",
+          "type": "number"
+        },
+        "y0": {
+          "minimum": 0,
+          "title": "Y0",
+          "type": "number"
+        },
+        "x1": {
+          "minimum": 0,
+          "title": "X1",
+          "type": "number"
+        },
+        "y1": {
+          "minimum": 0,
+          "title": "Y1",
+          "type": "number"
+        },
+        "page": {
+          "minimum": 1,
+          "title": "Page",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "x0",
+        "y0",
+        "x1",
+        "y1",
+        "page"
+      ],
+      "title": "BoundingBox",
+      "type": "object"
+    },
+    "FieldValue": {
+      "additionalProperties": false,
+      "description": "One extracted scalar, plus its evidence.",
+      "properties": {
+        "value": {
+          "default": null,
+          "title": "Value"
+        },
+        "quote": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Verbatim substring copied from the source text; used to locate the bbox.",
+          "title": "Quote"
+        },
+        "bbox": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BoundingBox"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "confidence": {
+          "default": 1.0,
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "source": {
+          "default": "llm",
+          "enum": [
+            "llm",
+            "vlm",
+            "parser",
+            "reviewer"
+          ],
+          "title": "Source",
+          "type": "string"
+        }
+      },
+      "title": "FieldValue",
+      "type": "object"
+    },
+    "LineItem": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "$ref": "#/$defs/FieldValue"
+        },
+        "quantity": {
+          "$ref": "#/$defs/FieldValue"
+        },
+        "unit_price": {
+          "$ref": "#/$defs/FieldValue"
+        },
+        "amount": {
+          "$ref": "#/$defs/FieldValue"
+        }
+      },
+      "title": "LineItem",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "doc_id": {
+      "title": "Doc Id",
+      "type": "string"
+    },
+    "doc_type": {
+      "default": "receipt",
+      "enum": [
+        "cn_invoice",
+        "receipt",
+        "layout"
+      ],
+      "title": "Doc Type",
+      "type": "string"
+    },
+    "pipeline": {
+      "enum": [
+        "layout_llm",
+        "vlm_e2e"
+      ],
+      "title": "Pipeline",
+      "type": "string"
+    },
+    "model": {
+      "default": "",
+      "title": "Model",
+      "type": "string"
+    },
+    "fields": {
+      "additionalProperties": {
+        "$ref": "#/$defs/FieldValue"
+      },
+      "title": "Fields",
+      "type": "object"
+    },
+    "line_items": {
+      "items": {
+        "$ref": "#/$defs/LineItem"
+      },
+      "title": "Line Items",
+      "type": "array"
+    },
+    "latency_ms": {
+      "default": 0,
+      "title": "Latency Ms",
+      "type": "integer"
+    },
+    "parse_latency_ms": {
+      "default": 0,
+      "title": "Parse Latency Ms",
+      "type": "integer"
+    },
+    "prompt_tokens": {
+      "default": 0,
+      "title": "Prompt Tokens",
+      "type": "integer"
+    },
+    "completion_tokens": {
+      "default": 0,
+      "title": "Completion Tokens",
+      "type": "integer"
+    },
+    "cost_cny": {
+      "default": 0.0,
+      "title": "Cost Cny",
+      "type": "number"
+    }
+  },
+  "required": [
+    "doc_id",
+    "pipeline"
+  ],
+  "title": "ExtractionResult",
+  "type": "object"
+}

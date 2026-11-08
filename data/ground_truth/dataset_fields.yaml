@@ -1,0 +1,57 @@
+# Per-dataset scoring whitelist. Fields outside the list are NOT scored:
+# a dataset that simply does not contain buyer_tax_id must not be scored as a miss.
+
+cn_invoice:
+  fields:
+    - invoice_number
+    - invoice_date
+    - seller_name
+    - seller_tax_id
+    - buyer_name
+    - buyer_tax_id
+    - subtotal
+    - amount_total
+    - tax_total
+    - tax_rate
+    - total_with_tax
+    - amount_in_words
+  line_items: [description, quantity, unit_price, amount]
+  # Chinese-specific rules (R002 amount in words, R004 tax id) apply only here.
+
+synthetic:
+  # Same schema as cn_invoice; kept as a separate dataset so stratified reports
+  # can compare real receipts vs generated invoices.
+  fields:
+    - invoice_number
+    - invoice_date
+    - seller_name
+    - seller_tax_id
+    - buyer_name
+    - buyer_tax_id
+    - subtotal
+    - amount_total
+    - tax_total
+    - tax_rate
+    - total_with_tax
+    - amount_in_words
+  line_items: [description, quantity, unit_price, amount]
+
+cord:
+  # CORD-v2 gt_parse has no merchant name or date field. Do not score them.
+  fields: [subtotal, tax_total, discount_total, amount_total]
+  line_items: [description, quantity, unit_price, amount]
+
+sroie:
+  # SROIE provides company/date/address/total only; no line-item annotation.
+  fields: [merchant_name, address, receipt_date, amount_total]
+  line_items: []
+
+upload_receipt:
+  # Runtime schema for user-uploaded receipts (no ground truth).
+  fields: [merchant_name, receipt_date, address, subtotal, tax_total, amount_total]
+  line_items: [description, quantity, unit_price, amount]
+
+funsd:
+  # FUNSD is a form understanding set; used for layout/evidence metrics only.
+  fields: []
+  line_items: []

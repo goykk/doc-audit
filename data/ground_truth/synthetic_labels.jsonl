@@ -1,0 +1,50 @@
+{"doc_id": "syn_invoice_0001", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0002", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0003", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0004", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0005", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0006", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0007", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0008", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0009", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0010", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0011", "fault": "R001 价税合计不等于不含税+税额", "expected_rules": ["R001"], "expect_status": "rejected"}
+{"doc_id": "syn_invoice_0012", "fault": "R002 大写金额与小写不一致", "expected_rules": ["R002"], "expect_status": "rejected"}
+{"doc_id": "syn_invoice_0013", "fault": "R003 行项目合计大于小计", "expected_rules": ["R003"], "expect_status": "rejected"}
+{"doc_id": "syn_invoice_0014", "fault": "R004 税率13%与6%税额不匹配", "expected_rules": ["R004"], "expect_status": "review"}
+{"doc_id": "syn_invoice_0015", "fault": "R005 购方税号长度非法", "expected_rules": ["R005"], "expect_status": "review"}
+{"doc_id": "syn_invoice_0016", "fault": "R006 开票日期晚于今天", "expected_rules": ["R006"], "expect_status": "review"}
+{"doc_id": "syn_invoice_0017", "fault": "R007 数量×单价不等于行金额", "expected_rules": ["R007"], "expect_status": "review"}
+{"doc_id": "syn_invoice_0018", "fault": "R008 价税合计与实付合计不一致", "expected_rules": ["R008"], "expect_status": "rejected"}
+{"doc_id": "syn_invoice_0019", "fault": "R009 发票号码位数非法", "expected_rules": ["R009"], "expect_status": "review"}
+{"doc_id": "syn_invoice_0020", "fault": "R011 行项目数量/单价为负", "expected_rules": ["R011"], "expect_status": "rejected"}
+{"doc_id": "syn_invoice_0021", "fault": "R012 与 0001 票号完全相同", "expected_rules": ["R012"], "expect_status": "rejected"}
+{"doc_id": "syn_invoice_0022", "fault": "R013 与 0001 同票号但金额不同", "expected_rules": ["R012", "R013"], "expect_status": "rejected"}
+{"doc_id": "syn_invoice_0023", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0024", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0025", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0026", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0027", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0028", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0029", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0030", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0031", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0032", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0033", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0034", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0035", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0036", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0037", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0038", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0039", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0040", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0041", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0042", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0043", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0044", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0045", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0046", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0047", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0048", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0049", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}
+{"doc_id": "syn_invoice_0050", "fault": "clean", "expected_rules": [], "expect_status": "accepted"}

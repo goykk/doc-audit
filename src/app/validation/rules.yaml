@@ -1,0 +1,138 @@
+# 14 validation rules. Rules are declarative; the engine provides the safe primitives.
+# A rule whose required fields are absent is SKIPPED, never counted as passed.
+version: 1
+
+engine:
+  min_confidence: 0.85
+  duplicate_vector_threshold: 0.92
+
+rules:
+  - id: R001
+    name: 价税合计一致
+    category: arithmetic
+    level: error
+    check: expression
+    expr: "abs(amount_total - (subtotal + tax_total - discount_total)) <= max(0.02, abs(amount_total) * 0.001)"
+    defaults: {discount_total: 0}
+    applies_to: [cn_invoice]
+    message: 不含税金额 + 税额 - 折扣 与含税合计不符
+
+  - id: R002
+    name: 中文大写金额与小写一致
+    category: cross_field
+    level: error
+    check: cn_upper
+    amount_fields: [total_with_tax, amount_total]
+    words_field: amount_in_words
+    applies_to: [cn_invoice]
+    message: 大写金额与小写金额不一致
+
+  - id: R003
+    name: 行项目合计等于小计/总额
+    category: arithmetic
+    level: error
+    check: sum_equals
+    source: line_items.amount
+    targets: [subtotal, amount_total]
+    tolerance: 0.05
+    message: 行项目金额合计与小计或总额不符
+
+  - id: R004
+    name: 税率与税额匹配
+    category: cross_field
+    level: warn
+    check: tax_rate
+    rate_field: tax_rate
+    base_fields: [subtotal]
+    tax_field: tax_total
+    applies_to: [cn_invoice]
+    message: 按税率计算的税额与实际税额不符
+
+  - id: R005
+    name: 纳税人识别号格式
+    category: format
+    level: warn
+    check: tax_id
+    fields: [buyer_tax_id, seller_tax_id]
+    lengths: [15, 18, 20]
+    applies_to: [cn_invoice]
+    message: 纳税人识别号长度或字符不合法
+
+  - id: R006
+    name: 开票日期合理性
+    category: business
+    level: warn
+    check: date_reasonable
+    fields: [invoice_date]
+    max_age_days: 365
+    applies_to: [cn_invoice]
+    message: 开票日期晚于今天或早于一年前
+
+  - id: R007
+    name: 数量乘单价等于行金额
+    category: arithmetic
+    level: warn
+    check: line_price
+    tolerance_ratio: 0.01
+    min_tolerance: 0.02
+    message: 行项目数量×单价与行金额不符
+
+  - id: R008
+    name: 含税合计字段互证
+    category: cross_field
+    level: error
+    check: expression
+    expr: "abs(total_with_tax - amount_total) <= 0.02"
+    applies_to: [cn_invoice]
+    message: 价税合计与实付合计不一致
+
+  - id: R009
+    name: 发票号码格式
+    category: format
+    level: warn
+    check: invoice_number
+    field: invoice_number
+    pattern: "^[0-9A-Za-z]{8,20}$"
+    applies_to: [cn_invoice]
+    message: 发票号码位数或字符不合法
+
+  - id: R010
+    name: 日期格式
+    category: format
+    level: warn
+    check: date_format
+    fields: [invoice_date]
+    pattern: "^\\d{4}-\\d{2}-\\d{2}$"
+    applies_to: [cn_invoice]
+    message: 日期不是 YYYY-MM-DD 格式
+
+  - id: R011
+    name: 金额与数量非负
+    category: business
+    level: error
+    check: nonnegative
+    amount_fields: [subtotal, tax_total, amount_total, total_with_tax]
+    line_item_fields: [quantity, unit_price, amount]
+    message: 出现负数金额或数量
+
+  - id: R012
+    name: 重复票据检测
+    category: cross_document
+    level: error
+    check: duplicate_document
+    message: 检测到重复或高度相似的票据
+
+  - id: R013
+    name: 同票号金额冲突
+    category: cross_document
+    level: error
+    check: invoice_amount_conflict
+    message: 同一票号在不同单据上的金额不一致
+
+  - id: R014
+    name: 字段置信度阈值
+    category: confidence
+    level: warn
+    check: confidence
+    threshold: 0.85
+    message: 字段置信度低于阈值，需人工复核

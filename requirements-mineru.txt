@@ -1,0 +1,4 @@
+# Separate Python 3.12 environment only; do not install into the app venv.
+# Pin 2.x for the classic `pipeline` backend and middle.json/content_list.json outputs.
+# MinerU 4.x has a different CLI/result contract and is intentionally not used here.
+mineru[core]==2.7.6

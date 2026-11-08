@@ -1,0 +1,49 @@
+services:
+  app:
+    build: .
+    container_name: docaudit-app
+    restart: unless-stopped
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_PORT: 3306
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-docaudit}
+      MYSQL_USER: ${MYSQL_USER:-docaudit}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-docaudit_pwd}
+      DASHSCOPE_API_KEY: ${DASHSCOPE_API_KEY:-}
+      LLM_MODEL: ${LLM_MODEL:-qwen-plus}
+      VLM_MODEL: ${VLM_MODEL:-qwen3-vl-plus}
+      AUTH_REQUIRED: ${AUTH_REQUIRED:-false}
+      API_KEYS: ${API_KEYS:-}
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data/raw:/app/data/raw:ro
+      - ./data/uploads:/app/data/uploads
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  mysql:
+    # Pinned to the locally available image; Docker Hub pull is unreliable on this network.
+    image: mysql:8.0.36
+    container_name: docaudit-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root_pwd}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-docaudit}
+      MYSQL_USER: ${MYSQL_USER:-docaudit}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-docaudit_pwd}
+    ports:
+      - "${MYSQL_PORT:-3308}:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      # Applied once on first boot of an empty data directory.
+      - ./infra/mysql/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-p${MYSQL_ROOT_PASSWORD:-root_pwd}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  mysql_data:
