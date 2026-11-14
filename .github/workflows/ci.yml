@@ -46,15 +46,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Install MySQL client
-        run: sudo apt-get update && sudo apt-get install -y mysql-client
-
       - name: Apply schema migrations
-        run: |
-          for file in infra/mysql/init/*.sql; do
-            echo "Applying $file"
-            mysql -h127.0.0.1 -uroot -proot_pwd docaudit < "$file"
-          done
+        env:
+          MYSQL_ROOT_PASSWORD: root_pwd
+        run: python scripts/apply_migrations.py
 
       - name: Run tests
         run: pytest -q
